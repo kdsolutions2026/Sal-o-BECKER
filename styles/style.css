@@ -2119,3 +2119,38 @@ html{
     background:#fbfaf7 !important;
   }
 }
+
+@media (max-width:1120px){
+  .menu-toggle{
+    position:relative;
+    overflow:hidden;
+  }
+
+  .menu-toggle.open{
+    place-items:center;
+  }
+
+  .menu-toggle.open span{
+    opacity:0;
+  }
+
+  .menu-toggle.open::before{
+    content:"B";
+    position:absolute;
+    inset:50% auto auto 50%;
+    width:auto;
+    height:auto;
+    background:none;
+    transform:translate(-50%,-50%);
+    font-family:"Michroma",Inter,Arial,sans-serif;
+    font-size:1rem;
+    font-weight:400;
+    line-height:1;
+    letter-spacing:.02em;
+    color:currentColor;
+  }
+
+  .menu-toggle.open::after{
+    content:none;
+  }
+}
