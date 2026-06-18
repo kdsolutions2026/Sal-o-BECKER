@@ -2032,10 +2032,10 @@ body[data-page="galeria"] .becker-gallery .gallery-item{
 /* Home mobile: bloco mais discreto no canto inferior direito */
 @media (max-width:720px){
   body[data-page="home"] .studio-hero{
-    align-items:stretch;
-    align-content:stretch;
+    align-items:end;
+    align-content:end;
     min-height:58svh;
-    padding:88px 0 0;
+    padding:88px 0 10px;
   }
 
   body[data-page="home"] .studio-hero::after{
@@ -2046,7 +2046,10 @@ body[data-page="galeria"] .becker-gallery .gallery-item{
 
   body[data-page="home"] .studio-hero-copy{display:none !important;}
 
-  body[data-page="home"] .home-dots{display:none !important;}
+  body[data-page="home"] .home-dots{
+    display:flex !important;
+    margin-top:0 !important;
+  }
 }
 
 /* Home desktop: aproxima texto e botoes da linha dos slides */
