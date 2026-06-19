@@ -1044,7 +1044,7 @@ body[data-page="localizacao"] .location-hero::after{background:linear-gradient(9
   }
   body[data-page="home"] .home-slide:nth-child(1) img{object-position:48% center!important;}
   body[data-page="home"] .home-slide:nth-child(2) img{object-position:70% center!important;}
-  body[data-page="home"] .home-slide:nth-child(3) img{object-position:72% center!important;}
+  body[data-page="home"] .home-slide:nth-child(3) img{object-position:center center!important;}
   body[data-page="home"] .home-slide:nth-child(4) img{object-position:76% center!important;}
   body[data-page="home"] .home-slide:nth-child(5) img{object-position:72% center!important;}
   body[data-page="home"] .home-slide:nth-child(6) img{object-position:72% center!important;}
