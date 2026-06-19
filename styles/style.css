@@ -2158,3 +2158,24 @@ html{
     content:none;
   }
 }
+
+@media (max-width:720px){
+  body[data-page="home"] .studio-hero{
+    min-height:58svh !important;
+    padding:88px 0 0 !important;
+  }
+
+  body[data-page="home"] .studio-hero::after{
+    background:none !important;
+  }
+
+  body[data-page="home"] .home-dots{
+    margin-top:0 !important;
+    margin-bottom:-1px !important;
+    padding-bottom:8px !important;
+  }
+
+  body[data-page="home"] .intro-minimal{
+    padding-top:42px !important;
+  }
+}
