@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sal-o-becker.vercel.app/sitemap.xml
