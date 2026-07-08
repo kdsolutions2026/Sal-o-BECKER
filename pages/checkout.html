@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#fbfaf7">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Checkout | Becker</title>
+  <meta name="description" content="Finalize sua compra na Becker com Pix imediato, cartao, parcelamento e calculo de frete.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body data-page="checkout">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav scrolled" data-nav data-nav-static="scrolled">
+    <a class="brand" href="../index.html" aria-label="Becker"><strong>BECKER</strong></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    <nav class="nav-panel" aria-label="Menu principal">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="servicos.html">Servicos</a>
+      <a class="nav-link active" href="loja.html">Loja</a>
+      <a class="nav-link" href="galeria.html">Galeria</a>
+      <a class="nav-link" href="localizacao.html">Localizacao</a>
+      <a class="nav-social" href="https://www.instagram.com/salaobecker?igsh=cGc2bHFidml6MHFm" target="_blank" rel="noopener" aria-label="Instagram da Becker">Instagram</a>
+      <a class="nav-action" href="agendamento.html">Agendar</a>
+      <button class="cart-button" type="button" data-open-cart aria-label="Abrir carrinho"><span class="cart-icon" aria-hidden="true"></span><b data-cart-count>0</b></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero checkout-hero">
+      <div class="shell page-hero-inner">
+        <span class="eyebrow">Checkout Becker</span>
+        <h1 class="display">Finalize seu pedido em etapas, com Pix imediato ou cartao.</h1>
+        <p class="lead">Primeiro coletamos seus dados, depois voce escolhe entrega e por fim decide como pagar. No Pix, o QR Code aparece direto apos o clique.</p>
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="shell checkout-grid checkout-mercado-grid">
+        <section class="checkout-form checkout-mercado-form">
+          <div class="checkout-flow-nav" data-step-indicator>
+            <button class="checkout-flow-step is-active" type="button" data-step-target="customer">
+              <small>Etapa 1</small>
+              <strong>Seus dados</strong>
+            </button>
+            <button class="checkout-flow-step" type="button" data-step-target="shipping">
+              <small>Etapa 2</small>
+              <strong>Entrega</strong>
+            </button>
+            <button class="checkout-flow-step" type="button" data-step-target="payment">
+              <small>Etapa 3</small>
+              <strong>Pagamento</strong>
+            </button>
+          </div>
+
+          <section class="checkout-stage is-active" data-stage="customer">
+            <div class="checkout-block">
+              <span class="eyebrow">Etapa 1</span>
+              <h2>Quem vai receber este pedido?</h2>
+              <p>Preencha seus dados de contato primeiro. O e-mail e opcional aqui e nao vai mais aparecer dentro do Pix.</p>
+            </div>
+
+            <form class="checkout-customer-form" data-customer-form novalidate>
+              <div class="form-row">
+                <label>
+                  Nome completo
+                  <input type="text" name="fullName" placeholder="Seu nome completo" autocomplete="name" required>
+                </label>
+                <label>
+                  WhatsApp
+                  <input type="tel" name="phone" placeholder="(17) 99999-9999" inputmode="tel" autocomplete="tel" required>
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  CPF
+                  <input type="text" name="cpf" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off" required>
+                </label>
+                <label>
+                  E-mail de contato
+                  <input type="email" name="email" placeholder="voce@email.com (opcional)" autocomplete="email">
+                </label>
+              </div>
+              <label>
+                Observacoes do pedido
+                <textarea name="notes" placeholder="Ex.: retirada no salao, combinar entrega local, observacoes gerais."></textarea>
+              </label>
+            </form>
+
+            <div class="checkout-stage-actions">
+              <button class="btn" type="button" data-next-stage="shipping">Continuar para entrega</button>
+            </div>
+          </section>
+
+          <section class="checkout-stage" data-stage="shipping" hidden>
+            <div class="checkout-block">
+              <span class="eyebrow">Etapa 2</span>
+              <h2>Como voce quer receber?</h2>
+              <p>Escolha retirada no salao ou entrega com simulacao de frete por CEP antes de seguir para o pagamento.</p>
+            </div>
+
+            <div class="payment-panel checkout-shipping-card">
+              <div class="checkout-shipping-modes" data-shipping-modes>
+                <label class="checkout-shipping-option active">
+                  <input type="radio" name="shippingMode" value="pickup" checked>
+                  <span>Retirar no salao</span>
+                </label>
+                <label class="checkout-shipping-option">
+                  <input type="radio" name="shippingMode" value="delivery">
+                  <span>Receber em casa</span>
+                </label>
+              </div>
+
+              <div class="checkout-shipping-form" data-shipping-form hidden>
+                <label>
+                  CEP de entrega
+                  <input type="text" name="shippingZip" data-shipping-zip placeholder="00000-000" inputmode="numeric" autocomplete="postal-code">
+                </label>
+                <button class="btn small" type="button" data-calc-shipping>Calcular frete</button>
+                <p class="checkout-shipping-feedback" data-shipping-feedback>Digite o CEP para simular o frete.</p>
+              </div>
+            </div>
+
+            <div class="checkout-stage-actions">
+              <button class="btn ghost dark" type="button" data-prev-stage="customer">Voltar</button>
+              <button class="btn" type="button" data-next-stage="payment">Ir para pagamento</button>
+            </div>
+          </section>
+
+          <section class="checkout-stage" data-stage="payment" hidden>
+            <div class="checkout-block">
+              <span class="eyebrow">Etapa 3</span>
+              <h2>Escolha como pagar</h2>
+              <p>Para Pix, o QR Code e gerado na hora. Para cartao, o parcelamento aparece automaticamente no formulario do Mercado Pago.</p>
+            </div>
+
+            <div class="checkout-payment-chooser" data-payment-chooser>
+              <button class="checkout-payment-method is-active" type="button" data-payment-method="pix">
+                <small>Imediato</small>
+                <strong>Pix com QR Code</strong>
+                <span>Gera na hora, sem pedir e-mail novamente.</span>
+              </button>
+              <button class="checkout-payment-method" type="button" data-payment-method="card">
+                <small>Parcelado</small>
+                <strong>Cartao de credito</strong>
+                <span>Pague no site com parcelamento automatico.</span>
+              </button>
+            </div>
+
+            <div class="payment-panel checkout-helper" data-mp-status>
+              Escolha Pix ou cartao para carregar a forma de pagamento.
+            </div>
+
+            <section class="checkout-payment-panel" data-payment-panel="pix">
+              <div class="checkout-block">
+                <span class="eyebrow">Pix</span>
+                <h3>Gerar QR Code na hora</h3>
+                <p>Clique no botao abaixo para criar o Pix desse pedido. O QR Code e o copia e cola aparecem em seguida.</p>
+              </div>
+              <div class="checkout-pix-action">
+                <button class="btn" type="button" data-generate-pix>Gerar Pix agora</button>
+              </div>
+            </section>
+
+            <section class="checkout-payment-panel" data-payment-panel="card" hidden>
+              <div class="checkout-block">
+                <span class="eyebrow">Cartao</span>
+                <h3>Pagar com cartao</h3>
+                <p>O formulario abaixo mostra apenas cartao de credito, com parcelamento automatico.</p>
+              </div>
+              <div class="checkout-brick-card">
+                <div id="cardPaymentBrick_container"></div>
+              </div>
+            </section>
+
+            <div class="checkout-result" data-mp-result hidden>
+              <div class="checkout-result-copy">
+                <span class="eyebrow">Resultado</span>
+                <h3 data-mp-result-title>Pagamento iniciado</h3>
+                <p data-mp-result-message>Seu pedido foi enviado para processamento.</p>
+              </div>
+
+              <div class="checkout-pix" data-mp-pix hidden>
+                <img data-mp-pix-image alt="QR Code Pix do pedido">
+              <label>
+                Copia e cola do Pix
+                <textarea data-mp-pix-code readonly></textarea>
+              </label>
+              <button class="btn small ghost dark" type="button" data-copy-pix>Copiar chave Pix</button>
+            </div>
+
+              <div class="checkout-result-meta" data-mp-result-meta></div>
+            </div>
+
+            <div class="checkout-stage-actions">
+              <button class="btn ghost dark" type="button" data-prev-stage="shipping">Voltar</button>
+            </div>
+          </section>
+        </section>
+
+        <aside class="order-summary checkout-summary-card">
+          <div class="checkout-block">
+            <span class="eyebrow">Resumo</span>
+            <h2>Seu pedido</h2>
+            <p>Confira os produtos adicionados ao carrinho antes de concluir o pagamento.</p>
+          </div>
+
+          <div class="checkout-summary-items" data-mp-summary-items></div>
+
+          <div class="summary-total checkout-summary-total">
+            <div><span>Subtotal</span><strong data-mp-subtotal>R$ 0,00</strong></div>
+            <div><span>Frete</span><strong data-mp-shipping>Retirada no salao</strong></div>
+            <div><span>Total cobrado agora</span><strong data-mp-summary-total>R$ 0,00</strong></div>
+          </div>
+
+          <div class="payment-panel checkout-summary-note">
+            O valor final sempre considera a opcao escolhida: retirada no salao ou entrega com frete calculado.
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand"><strong>BECKER</strong><p>Beleza com cuidado, tecnica e sofisticacao para cada momento.</p><div class="footer-socials"><a href="https://www.instagram.com/salaobecker?igsh=cGc2bHFidml6MHFm" target="_blank" rel="noopener">Instagram do Salao</a><a href="https://www.instagram.com/marcobeckeroficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram Marco Becker</a><a href="https://www.instagram.com/anailebecker?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram Anaile Becker</a></div></div>
+      <div class="footer-col"><h4>Mapa</h4><a href="servicos.html">Menu 2026</a><a href="loja.html">Loja</a><a href="galeria.html">Galeria</a></div>
+      <div class="footer-col"><h4>Atendimento</h4><a href="agendamento.html">Agendamento</a><a href="https://wa.me/5517997711729?text=Ola%2C%20gostaria%20de%20falar%20sobre%20um%20pedido%20na%20Becker." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/salaobecker?igsh=cGc2bHFidml6MHFm" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="footer-col"><h4>Informacoes</h4><span>Pagamento processado pelo Mercado Pago.</span><span>R. dos Lirios, 886 - Sao Jose do Rio Preto.</span><span>Pedidos sujeitos a confirmacao de estoque.</span></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 Becker. Todos os direitos reservados.</span><span>Desenvolvido por KD-Solutions</span></div>
+  </footer>
+
+  <div class="cart-overlay" data-close-cart></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrinho lateral">
+    <div class="cart-head"><div><span class="eyebrow">Loja Becker</span><h3>Seu carrinho</h3></div><button class="icon-button" type="button" data-close-cart aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items" data-cart-items></div>
+    <div class="cart-empty" data-cart-empty><strong>Carrinho vazio</strong><p>Escolha produtos da curadoria Becker para montar seu ritual de cuidado.</p><a class="btn small" href="loja.html">Ver loja</a></div>
+    <div class="cart-total"><div><span>Subtotal</span><strong data-cart-total>R$ 0,00</strong></div><a class="btn" href="checkout.html">Finalizar compra</a></div>
+  </aside>
+
+  <a class="float-wa" href="https://wa.me/5517997711729?text=Ola%2C%20gostaria%20de%20falar%20sobre%20um%20pedido%20na%20Becker." target="_blank" rel="noopener" aria-label="Falar com a Becker no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12.02 2C6.49 2 2 6.39 2 11.81c0 1.9.55 3.74 1.58 5.33L2.55 22l4.99-1.31a10.16 10.16 0 0 0 4.48 1.03h.01c5.53 0 10.02-4.4 10.02-9.82A9.76 9.76 0 0 0 12.02 2Zm0 17.95h-.01a8.4 8.4 0 0 1-4.27-1.17l-.31-.18-2.96.78.8-2.88-.19-.3a8.09 8.09 0 0 1-1.3-4.39c0-4.44 3.69-8.05 8.23-8.05 2.2 0 4.27.85 5.82 2.37a8 8 0 0 1 2.41 5.68c0 4.44-3.69 8.05-8.22 8.05Z" fill="currentColor"/>
+      <path d="M16.76 13.48c-.26-.13-1.56-.76-1.8-.85-.24-.09-.41-.13-.59.13-.17.26-.68.84-.83 1.01-.16.17-.31.2-.58.07-.26-.13-1.12-.4-2.13-1.28-.79-.68-1.32-1.53-1.47-1.79-.15-.26-.02-.4.11-.53.12-.11.26-.29.38-.43.13-.15.17-.26.26-.44.08-.18.04-.33-.03-.46-.06-.13-.58-1.41-.79-1.93-.21-.49-.43-.43-.59-.44h-.5c-.17 0-.46.06-.7.32-.24.26-.92.9-.92 2.19 0 1.29.95 2.53 1.08 2.71.13.18 1.86 2.84 4.5 3.99.63.27 1.12.43 1.5.55.64.2 1.22.17 1.68.1.51-.08 1.56-.64 1.78-1.26.22-.62.22-1.15.16-1.26-.06-.1-.24-.17-.5-.3Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <div class="lightbox" data-lightbox-modal><button type="button" aria-label="Fechar imagem">×</button><img src="" alt=""></div>
+
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <script src="../scripts/runtime-config.js"></script>
+  <script src="../scripts/store-refresh.js"></script>
+  <script src="../scripts/mercadopago-checkout.js?v=20260708f"></script>
+</body>
+</html>
